@@ -1,4 +1,67 @@
 
 @media screen and (min-width: 600px) {
+  .gallery-img {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  div > .logo {
+    display: none;
+  }
+
+  .navbar > .logo {
+    display: block;
+  }
+
+  .navbar {
+    align-items: center;
+    display: flex !important;
+    gap: 6rem;
+    position: inherit;
+  }
+
+  .navbar > ul {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
   
+  .nav-item > a {
+    font-weight: 400;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .product-details {
+    align-items: center;
+    display: grid;
+    gap: 8rem;
+    margin: 10rem auto 0;
+    max-width: 100rem;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .gallery-desktop {
+    display: block;
+  }
+
+  .gallery-img {
+    aspect-ratio: 4/4;
+    height: 100%;
+    object-fit: initial;
+    object-position: initial;
+    width: 100%;
+  }
 }

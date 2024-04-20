@@ -78,10 +78,9 @@ body {
   border-radius: 6px;
   background-color: var(--neutral-light-gray-blue);
   position: absolute;
-  left: 2.5%;
-  right: 2.5%;
+  right: 1rem;
   top: 7rem;
-  width: 95%;
+  min-width: 30rem;
   z-index: 1;
 }
 
@@ -169,6 +168,39 @@ body {
   position: relative;
 }
 
+.gallery-desktop {
+  display: none;
+}
+
+.current-img-gallery {
+  margin-bottom: 2rem;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gallery-thumbnails > div > img {
+  border-radius: 10px;
+  height: 8rem;
+  width: 8rem;
+}
+
+.gallery-thumbnails > div > img:hover {
+  cursor: pointer;
+  filter: opacity(50%);
+}
+
+.selected-gallery-img {
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+}
+
+.selected-gallery-img > img {
+  filter: opacity(20%) contrast(200%);
+}
+
 .gallery  button {
   align-items: center;
   background-color: var(--neutral-light-gray-blue);
@@ -220,7 +252,7 @@ body {
 
 .product-description {
   color: var(--neutral-dark-gray-blue);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   margin-bottom: 0.5rem;
 }
