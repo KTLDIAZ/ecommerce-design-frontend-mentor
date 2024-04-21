@@ -17,6 +17,7 @@
 
 body {
   font-family: "Kumbh Sans", sans-serif;
+  background-color: #fff;
 }
 
 .header {
@@ -35,11 +36,17 @@ body {
 }
 
 .profile-icon img {
+  border: 2px solid transparent;
+  border-radius: 50%;
   height: 2.2em;
 }
 
+.profile-icon img:hover {
+  border: 2px solid var(--primary);
+}
+
 .navbar {
-  background-color: var(--neutral-light-gray-blue);
+  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -178,7 +185,7 @@ body {
 
 .gallery-thumbnails {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .gallery-thumbnails > div > img {
@@ -294,14 +301,14 @@ body {
 
 .cart-btn {
   align-items: center;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: var(--neutral-light-gray-blue);
   display: flex;
   font-size: 2rem;
   font-weight: 700;
   justify-content: space-between;
   margin-bottom: 1rem;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 .cart-action {
