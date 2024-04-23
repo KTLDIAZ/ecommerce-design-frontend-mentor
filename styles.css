@@ -21,10 +21,10 @@ body {
 }
 
 .header {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
 }
 
 .header div > *:not(:last-child) {
@@ -35,10 +35,35 @@ body {
   height: 2rem;
 }
 
+.header-last {
+  align-items: center;
+  display: flex;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-length {
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 50%;
+  color: var(--neutral-light-gray-blue);
+  font-size: 0.6rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0rem;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
 .profile-icon img {
   border: 2px solid transparent;
   border-radius: 50%;
-  height: 2.2em;
+  height: 2.4em;
 }
 
 .profile-icon img:hover {

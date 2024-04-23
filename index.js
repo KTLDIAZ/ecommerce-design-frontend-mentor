@@ -11,6 +11,7 @@ const minus = document.querySelector('#minus')
 const quantityElement = document.querySelector('#quantity')
 const noItemsPlaceHolder = document.querySelector('.no-items')
 const cartFooter = document.querySelector('.cart-footer')
+const cartLength = document.querySelector('.cart-length')
 
 const handleMenu = (e) => {
   menuElement.classList.toggle('hidden')
@@ -45,9 +46,11 @@ const addToCart = ({ img = './images/image-product-1-thumbnail.jpg', title = 'Fa
   cartItems.appendChild(newItem)
   noItemsPlaceHolder.classList.toggle('hidden')
   cartFooter.classList.toggle('hidden')
+  cartLength.classList.toggle('hidden')
   
   const deleteBtn = document.querySelector('.delete-item')
   deleteBtn.addEventListener('click', (e) => {
+    cartLength.classList.toggle('hidden')
     newItem.remove()
     if (cartItems.childElementCount === 0) {
       noItemsPlaceHolder.classList.toggle('hidden')
