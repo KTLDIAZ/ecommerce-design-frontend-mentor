@@ -12,6 +12,7 @@ const quantityElement = document.querySelector('#quantity')
 const noItemsPlaceHolder = document.querySelector('.no-items')
 const cartFooter = document.querySelector('.cart-footer')
 const cartLength = document.querySelector('.cart-length')
+const thumbnails = document.querySelectorAll('.gallery-thumbnails img')
 
 const handleMenu = (e) => {
   menuElement.classList.toggle('hidden')
@@ -85,3 +86,14 @@ minus.addEventListener('click', () => {
   if (quantity <= 0) return
   quantityElement.textContent = --quantity
 })
+
+thumbnails.forEach(t => t.addEventListener('click', (e) => {
+  const currentThumbnail = document.querySelector('.selected-gallery-img') 
+  const currentGalleryImg = document.querySelector('.current-img-gallery')
+  
+  currentGalleryImg.firstElementChild.src = e.target.dataset.img;
+
+  currentThumbnail.classList.toggle('selected-gallery-img')
+
+  e.target.parentElement.classList.toggle('selected-gallery-img')
+}))

@@ -1,3 +1,28 @@
+@media (min-width: 460px) {
+  .gallery {
+    padding: 0 6rem;
+  }
+
+  .gallery > img {
+    border-radius: 10px;
+  }
+
+  .gallery > [name="previous"] {
+    background-color: var(--secondary);
+    left: 1rem;
+  }
+
+  .gallery > [name="next"] {
+    background-color: var(--secondary);
+    right: 1rem;
+  }
+
+  .product-container {
+    padding: 2rem 6rem;
+  }
+}
+
+
 
 @media screen and (min-width: 600px) {
   .gallery-img {
@@ -36,6 +61,11 @@
   
   .nav-item > a {
     font-weight: 400;
+    padding: 2.70rem 0;
+  }
+
+  .nav-item > a:hover, .nav-item > a:active {
+    border-bottom: 4px solid var(--primary);
   }
 
   .close-icon {
@@ -48,6 +78,8 @@
 
   .header {
     align-items: center;
+    padding: 0;
+    height: 8rem;
   }
 
   .header-last {
@@ -93,7 +125,11 @@
     object-position: initial;
     width: 100%;
   }
-
+  
+  .product-container {
+    padding: 2rem;
+  }
+  
   .heading {
     font-size: 3.6rem;
   }
