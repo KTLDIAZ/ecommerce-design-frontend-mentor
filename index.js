@@ -13,6 +13,8 @@ const noItemsPlaceHolder = document.querySelector('.no-items')
 const cartFooter = document.querySelector('.cart-footer')
 const cartLength = document.querySelector('.cart-length')
 const thumbnails = document.querySelectorAll('.gallery-thumbnails img')
+const previousBtn = document.querySelector('[name="previous"]')
+const nextBtn = document.querySelector('[name="next"]')
 
 const handleMenu = (e) => {
   menuElement.classList.toggle('hidden')
@@ -97,3 +99,37 @@ thumbnails.forEach(t => t.addEventListener('click', (e) => {
 
   e.target.parentElement.classList.toggle('selected-gallery-img')
 }))
+
+previousBtn.addEventListener('click', (e) => {
+  const imgElement = previousBtn.nextElementSibling
+  const imgId = Number(imgElement.dataset.value)
+  let nextImgId = 1;
+  if (imgId === 1) 
+    nextImgId = 4
+  else
+    nextImgId = imgId - 1
+
+  imgElement.src = imgElement.src.replace(imgId , nextImgId)
+  imgElement.dataset.value = nextImgId
+})
+
+nextBtn.addEventListener('click', (e) => {
+  const imgElement = previousBtn.nextElementSibling
+  const imgId = Number(imgElement.dataset.value)
+  let nextImgId = 1;
+  if (imgId === 4) 
+    nextImgId = 1
+  else
+    nextImgId = imgId + 1
+
+  imgElement.src = imgElement.src.replace(imgId , nextImgId)
+  imgElement.dataset.value = nextImgId
+})
+
+document.querySelector('.close-gallery').addEventListener('click', (e) => {
+  document.querySelector('.overlay-gallery').classList.toggle('hidden')
+})
+
+document.querySelector('.current-img-gallery').addEventListener('click', (e) => {
+  document.querySelector('.overlay-gallery').classList.toggle('hidden')
+})

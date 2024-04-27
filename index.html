@@ -73,7 +73,7 @@
   <div class="product-details">
     <section class="gallery" role="presentation">
       <button type="button" name="previous"><svg width="8" height="25" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="4.2" fill="none" fill-rule="evenodd"/></svg></button>
-      <img class="gallery-img" src="./images/image-product-1.jpg">
+      <img class="gallery-img" src="./images/image-product-1.jpg" data-value="1">
       <button type="button" name="next"><svg width="8" height="25" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="4.2" fill="none" fill-rule="evenodd"/></svg></button>
     </section>
 
@@ -82,6 +82,27 @@
         <img class="gallery-img" src="./images/image-product-1.jpg">
       </div>
       <div class="gallery-thumbnails">
+        <div class="selected-gallery-img">
+          <img src="./images/image-product-1-thumbnail.jpg" data-img="./images/image-product-1.jpg" alt="thumbnail 1">
+        </div>
+        <div>
+          <img src="./images/image-product-2-thumbnail.jpg" data-img="./images/image-product-2.jpg" alt="thumbnail 2">
+        </div>
+        <div>
+          <img src="./images/image-product-3-thumbnail.jpg" data-img="./images/image-product-3.jpg" alt="thumbnail 3">
+        </div>
+        <div>
+          <img src="./images/image-product-4-thumbnail.jpg" data-img="./images/image-product-4.jpg" alt="thumbnail 4">
+        </div>
+      </div>
+    </section>
+
+    <section class="overlay-gallery hidden">
+      <div class="current-img-gallery-overlay">
+        <a href="#" class="close-gallery"><svg width="18" height="20" viewBox="0 0 14 15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill-rule="evenodd"/></svg></a>
+        <img class="gallery-img-overlay" src="./images/image-product-1.jpg">
+      </div>
+      <div class="gallery-thumbnails gallery-thumbnails-overlay">
         <div class="selected-gallery-img">
           <img src="./images/image-product-1-thumbnail.jpg" data-img="./images/image-product-1.jpg" alt="thumbnail 1">
         </div>

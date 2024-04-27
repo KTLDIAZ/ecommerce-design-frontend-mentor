@@ -51,6 +51,7 @@
     gap: 6rem;
     position: inherit;
     width: auto;
+    z-index: 0;
   }
 
   .navbar > ul {
