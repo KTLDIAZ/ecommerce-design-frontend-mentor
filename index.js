@@ -12,7 +12,8 @@ const quantityElement = document.querySelector('#quantity')
 const noItemsPlaceHolder = document.querySelector('.no-items')
 const cartFooter = document.querySelector('.cart-footer')
 const cartLength = document.querySelector('.cart-length')
-const thumbnails = document.querySelectorAll('.gallery-thumbnails img')
+const thumbnails = document.querySelectorAll('#gallery-desktop img')
+const thumbnailsOverlay = document.querySelectorAll('#gallery-overlay img')
 const previousBtn = document.querySelector('[name="previous"]')
 const nextBtn = document.querySelector('[name="next"]')
 
@@ -89,16 +90,20 @@ minus.addEventListener('click', () => {
   quantityElement.textContent = --quantity
 })
 
-thumbnails.forEach(t => t.addEventListener('click', (e) => {
-  const currentThumbnail = document.querySelector('.selected-gallery-img') 
-  const currentGalleryImg = document.querySelector('.current-img-gallery')
+const thumbnailsLisetener = (selector) => {
+  return (e) => {
+    const currentThumbnail = document.querySelector(selector + ' .selected-gallery-img') 
+    const currentGalleryImg = currentThumbnail.parentElement.previousElementSibling
+
+    currentGalleryImg.firstElementChild.src = e.target.dataset.img
+    currentThumbnail.classList.toggle('selected-gallery-img')
   
-  currentGalleryImg.firstElementChild.src = e.target.dataset.img;
+    e.target.parentElement.classList.toggle('selected-gallery-img')
+  }
+}
 
-  currentThumbnail.classList.toggle('selected-gallery-img')
-
-  e.target.parentElement.classList.toggle('selected-gallery-img')
-}))
+thumbnails.forEach(t => t.addEventListener('click', thumbnailsLisetener('#gallery-desktop')))
+thumbnailsOverlay.forEach(t => t.addEventListener('click', thumbnailsLisetener('#gallery-overlay')))
 
 previousBtn.addEventListener('click', (e) => {
   const imgElement = previousBtn.nextElementSibling
