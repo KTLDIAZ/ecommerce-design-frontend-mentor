@@ -189,8 +189,8 @@ body {
 
 .product-title {
   font-weight: 400;
-  margin: 0;
-  margin-bottom: 0.8rem;
+  margin: 0 !important;
+  margin-bottom: 0.8rem !important;
 }
 
 .product-price {
@@ -435,3 +435,40 @@ body {
 .gallery-thumbnails-overlay  img {
   height: 7rem;
 }
+
+
+.current-img-gallery-overlay > button  {
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+}
+
+.current-img-gallery-overlay > button > svg {
+  stroke: #1D2026;
+}
+
+.current-img-gallery-overlay > button:hover > svg {
+  stroke: var(--primary);
+}
+
+.current-img-gallery-overlay > [name="previous"] {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-25px);
+}
+
+.current-img-gallery-overlay > [name="next"] {
+  position: absolute; 
+  top: 50%;
+  right: 0;
+  transform: translateX(25px);
+}
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 2rem; }
+.attribution a { color: var(--primary) }
